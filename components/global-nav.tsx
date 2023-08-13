@@ -20,11 +20,11 @@ const GlobalNav: React.FC<GlobalNavProps> = ({ data }) => {
   return (
     <nav className="mx-6 flex items-center space-x-4 lg:space-x-6">
       {routes.map((route) => (
-        <Link key={routes.href} href={routes.href}
+        <Link key={route.href} href={route.href}
           className={cn("text-sm font-medium transition-colors hover:text-black",
-            routes.active ? "text-black" : "text-neutral-500")}
+            route.active ? "text-black" : "text-neutral-500")}
         >
-          {routes.label}
+          {route.label}
         </Link>
       ))}
     </nav>

@@ -1,9 +1,13 @@
-import Container from "@/components/ui/container";
-import GlobalNav from "./global-nav";
-
 import Link from "next/link";
 
-const NavBar = () => {
+import Container from "@/components/ui/container";
+import GlobalNav from "./global-nav";
+import getCategories from "@/actions/get-categories";
+
+export const revalidate = 0;
+
+const NavBar = async () => {
+  const categories = await getCategories();
   return (
     <div className="border-b">
       <Container>
@@ -11,7 +15,7 @@ const NavBar = () => {
           <Link href="/" className="ml-4 lg:ml-0 gap-x-2">
             <p className="font-bold text-xl">STORE</p>
           </Link>
-          <GlobalNav data={[]} />
+          <GlobalNav data={categories} />
         </div>
       </Container>
     </div>
