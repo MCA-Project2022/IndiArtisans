@@ -6,7 +6,7 @@ import getCategories from "@/actions/get-categories";
 
 export const revalidate = 0;
 
-const NavBar = async () => {
+const Navbar = async () => {
   const categories = await getCategories();
   return (
     <div className="border-b">
@@ -22,4 +22,4 @@ const NavBar = async () => {
   );
 }
 
-export default NavBar;
+export default Navbar;
