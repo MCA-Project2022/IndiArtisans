@@ -9,7 +9,7 @@ import Footer from '@/components/footer'
 const font = Urbanist({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Create Next App',
+  title: 'Store',
   description: 'E-Commerce Store',
 }
 
