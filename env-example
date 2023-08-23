@@ -1,1 +1,3 @@
 NEXT_PUBLIC_API_URL=""
+DEFAULT_HOME_BILLBOARD_LABEL="Spring brings with it new threads"
+DEFAULT_HOME_BILLBOARD_IMAGE_URL="default_hb.jpg"
