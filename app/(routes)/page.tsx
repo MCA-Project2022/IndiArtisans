@@ -1,4 +1,4 @@
-import getBillboard from "@/actions/get-home-billboard";
+import getHomeBillboard from "@/actions/get-home-billboard";
 import getProducts from "@/actions/get-products";
 import Billboard from "@/components/billboard";
 import { Billboard as BillboardType } from "@/types";
@@ -7,7 +7,7 @@ import Container from "@/components/ui/container";
 
 const HomePage = async () => {
   const products = await getProducts({ isFeatured: true });
-  let homeBillboard: BillboardType = await getBillboard();
+  let homeBillboard: BillboardType = await getHomeBillboard();
   if (!homeBillboard) {
     homeBillboard = {
       id: '', label: `${process.env.DEFAULT_HOME_BILLBOARD_LABEL}`,
