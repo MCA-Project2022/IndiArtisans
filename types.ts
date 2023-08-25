@@ -15,6 +15,7 @@ export interface Product {
   category: Category;
   name: string;
   price: string;
+  description: string | null | undefined;
   isFeatured: Boolean;
   size: Size;
   color: Color;
